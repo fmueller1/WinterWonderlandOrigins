@@ -1,31 +1,44 @@
 {
-  "schemaVersion": 1,
-  "id": "winterwonderlandorigins",
-  "version": "${version}",
-  "name": "WinterWonderlandOrigins",
-  "description": "",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
-  "icon": "assets/winterwonderlandorigins/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "fabric-datagen": [
-      "wwo.winterwonderlandorigins.client.WinterwonderlandoriginsDataGenerator"
-    ],
-    "client": [
-      "wwo.winterwonderlandorigins.client.WinterwonderlandoriginsClient"
-    ],
-    "main": [
-      "wwo.winterwonderlandorigins.Winterwonderlandorigins"
-    ]
-  },
-  "mixins": [
-    "winterwonderlandorigins.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=${loader_version}",
-    "fabric": "*",
-    "minecraft": "${minecraft_version}"
-  }
+	"schemaVersion": 1,
+	"id": "winterwonderlandorigins",
+	"version": "${version}",
+	"name": "WinterWonderlandOrigins",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/winterwonderlandorigins/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.wwo.WinterWonderlandOrigins"
+		],
+		"client": [
+			"com.wwo.WinterWonderlandOriginsClient"
+		],
+		"fabric-datagen": [
+			"com.wwo.WinterWonderlandOriginsDataGenerator"
+		]
+	},
+	"mixins": [
+		"winterwonderlandorigins.mixins.json",
+		{
+			"config": "winterwonderlandorigins.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }
