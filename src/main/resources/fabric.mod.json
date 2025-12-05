@@ -3,9 +3,9 @@
 	"id": "winterwonderlandorigins",
 	"version": "${version}",
 	"name": "WinterWonderlandOrigins",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds custom origins to fabric origins for an rp thing",
 	"authors": [
-		"Me!"
+		"Me! (you know who you are)"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
